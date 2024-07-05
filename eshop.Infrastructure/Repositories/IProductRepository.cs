@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace eshop.Infrastructure.Repositories
 {
-    // Repository work with Entities only.s
-    public interface IRepository<T> where T : class, IEntity, new()
+    public interface IProductRepository : IRepository<Product>
     {
-        IEnumerable<T> GetAll();
-        T GetById(int id);
+        IEnumerable<Product> SearchProductByName(string productName);
     }
 }
