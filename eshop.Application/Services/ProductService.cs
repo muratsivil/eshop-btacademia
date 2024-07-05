@@ -2,7 +2,7 @@
 
 namespace eshop.Application.Services
 {
-    public class ProductService
+    public class ProductService : IProductService
     {
         private List<ProductCardResponse> _products;
         public ProductService()
@@ -13,6 +13,10 @@ namespace eshop.Application.Services
                 new(){ Id= 2, Name="Samsung", Description="16GB RAM", Price=17000 },
                 new(){ Id= 3, Name="IPAD", Description="8GB RAM", Price=25000 },
                 new(){ Id= 4, Name="Homend", Description="8GB RAM", Price=5000 },
+                new(){ Id= 5, Name="A", Description="8GB RAM", Price=10000 },
+                new(){ Id= 6, Name="B", Description="16GB RAM", Price=17000 },
+                new(){ Id= 7, Name="C", Description="8GB RAM", Price=25000 },
+                new(){ Id= 8, Name="D", Description="8GB RAM", Price=5000 },
             };
         }
         public List<ProductCardResponse> GetProductCardResponses()
