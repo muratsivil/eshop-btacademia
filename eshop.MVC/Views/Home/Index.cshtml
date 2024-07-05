@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ProductCardResponse>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome!</h1>
+    <p>Products that you looking for...</a>.</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        @foreach (var card in Model)
+        {
+        <div class="col-3">
+            <div class="card">
+                <img class="img-thumbnail" src="@card.ImageUrl" alt="@card.Name" />
+                <div class="card-body">
+                    <p class="card-text">@card.Name</p>
+                    <p class="card-text">@card.Description</p>
+                    <p class="card-text">@card.Price TL</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-success">Sepete Ekle</button>
+            </div>
+        </div>
+        }
+    </div>
+</div>
