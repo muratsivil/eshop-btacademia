@@ -1,6 +1,6 @@
-﻿using eshop.MVC.Models;
+﻿using eshop.Application.DataTransferObjects.Responses;
 
-namespace eshop.MVC
+namespace eshop.Application.Services
 {
     public class ProductService
     {
